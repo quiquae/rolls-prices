@@ -7,7 +7,7 @@
 :root[data-theme="dark"]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#9a988f;
 --grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);--land:#232322;--marriage:#e66767;--both:#9247a6;--wardship:#3987e5}
 *{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:1040px;margin:0 auto;padding:32px 20px 64px}
+main{max-width:1040px;margin:0 auto;padding:32px 20px 64px;overflow-wrap:break-word}
 h1{font-size:28px;line-height:1.2;margin:0 0 6px}h2{font-size:20px;margin:40px 0 10px}h3{font-size:16px;margin:22px 0 6px}
 p,li{max-width:72ch}p{margin:0 0 12px}.muted{color:var(--muted)}.lede{color:var(--ink2)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:22px 0}
@@ -33,6 +33,7 @@ p,li{max-width:72ch}p{margin:0 0 12px}.muted{color:var(--muted)}.lede{color:var(
 padding:8px 10px;font-size:13px;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0,.12);pointer-events:none}
 figcaption{font-size:13px;margin:6px 4px 2px}
 table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums;margin:6px 0 18px}
+.tw{position:relative;max-width:100%;overflow-x:auto}.tw caption{max-width:calc(100vw - 40px)}
 caption{text-align:left;color:var(--ink2);font-size:14px;padding:0 0 6px}
 th,td{padding:6px 8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
 thead th{color:var(--ink2);font-weight:600}.n{text-align:right;white-space:nowrap}

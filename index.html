@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prices in the rolls</title><style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#6b6a65;
+--grid:#e1e0d9;--axis:#c3c2b7;--border:rgba(11,11,11,.10);--land:#ecebe6;--marriage:#e34948;--both:#863397;--wardship:#2a78d6}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;
+--ink:#f0efec;--ink2:#c3c2b7;--muted:#9a988f;--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);--land:#232322;
+--marriage:#e66767;--both:#9247a6;--wardship:#3987e5}}
+:root[data-theme="dark"]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#9a988f;
+--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);--land:#232322;--marriage:#e66767;--both:#9247a6;--wardship:#3987e5}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1040px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:28px;line-height:1.2;margin:0 0 6px}h2{font-size:20px;margin:40px 0 10px}h3{font-size:16px;margin:22px 0 6px}
+p,li{max-width:72ch}p{margin:0 0 12px}.muted{color:var(--muted)}.lede{color:var(--ink2)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:22px 0}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.tile b{display:block;font-size:28px;line-height:1.15;font-variant-numeric:tabular-nums}
+.tile span{color:var(--ink2);font-size:14px}
+.viewbar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin:8px 0}
+.views{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.views button{font:inherit;font-size:14px;padding:6px 12px;border:0;background:var(--surface);color:var(--ink2);cursor:pointer}
+.views button+button{border-left:1px solid var(--border)}
+.views button[aria-pressed="true"]{background:var(--ink);color:var(--page)}
+.views button:focus-visible{outline:2px solid var(--wardship);outline-offset:-2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}.key{display:inline-flex;align-items:center;gap:6px}
+.chart-wrap{position:relative;margin:0;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 10px 6px}
+#dots{display:block;width:100%;height:auto}.key svg{flex:none;width:12px;height:12px}
+.grid{stroke:var(--grid);stroke-width:1}.axis{stroke:var(--axis);stroke-width:1}
+.tick,.lab{fill:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.lab{fill:var(--ink);font-weight:600;paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
+.med{stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+.dot{stroke:var(--surface);stroke-width:1.5;opacity:.85;cursor:pointer}.dot:hover{opacity:1;stroke:var(--ink)}
+.d-marriage{fill:var(--marriage)}.d-both{fill:var(--both)}.d-wardship{fill:var(--wardship)}
+.tip{position:absolute;max-width:250px;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:6px;
+padding:8px 10px;font-size:13px;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0,.12);pointer-events:none}
+figcaption{font-size:13px;margin:6px 4px 2px}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums;margin:6px 0 18px}
+caption{text-align:left;color:var(--ink2);font-size:14px;padding:0 0 6px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+thead th{color:var(--ink2);font-weight:600}.n{text-align:right;white-space:nowrap}
+.bar-h{width:28%}.bar-c{padding-top:10px}.bar{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--ink2)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.half td.m,.half td.b,.half td.w{text-align:right}
+details{margin:8px 0}summary{cursor:pointer;color:var(--ink2)}
+.all{font-size:13px}.all td{white-space:nowrap}.all td.who{white-space:normal}
+a{color:inherit}ul{padding-left:20px}
+
+.pages{list-style:none;padding:0;margin:22px 0}.pages li{margin:0 0 14px}.pages a{font-size:18px;font-weight:600}</style></head>
+<body><main><h1>Prices in the rolls</h1>
+<p class="lede">What the crown charged, as the calendared rolls of medieval England record it. Read from the entries by rules; each sale or fee counted once.</p>
+<ul class="pages">
+<li><a href="price-of-a-person.html">The price of a person</a><br><span class="muted">860 sales of a ward's marriage or lands, 1232 to 1481</span></li>
+<li><a href="price-of-a-confirmation.html">The price of a confirmation</a><br><span class="muted">2,393 fees to confirm an older grant, 1278 to 1486</span></li>
+</ul>
+<p class="small muted">From <a href="https://readingtherolls.com">Reading the Rolls</a>.</p>
+</main></body></html>

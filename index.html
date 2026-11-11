@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="icon" href="data:,"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prices in the rolls</title><style>
+<title>Prices in the Patent Rolls</title><style>
 :root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#6b6a65;
 --grid:#e1e0d9;--axis:#c3c2b7;--border:rgba(11,11,11,.10);--land:#ecebe6;--marriage:#e34948;--both:#863397;--wardship:#2a78d6}
 @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;
@@ -35,7 +35,7 @@ padding:8px 10px;font-size:13px;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0
 figcaption{font-size:13px;margin:6px 4px 2px}
 table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums;margin:6px 0 18px}
 .tw{position:relative;max-width:100%;overflow-x:auto}
-.band{fill:var(--grid)}.trend{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
+.band{fill:var(--grid)}.trend{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}.trend.goods{stroke-width:2;stroke-dasharray:7 5}.trend.pay{stroke-width:2.5;stroke-dasharray:1 5;stroke-linecap:round}
 .plague{stroke:var(--ink2);stroke-width:1;stroke-dasharray:4 4}.hit{fill:transparent}.hit:hover{fill:var(--border)}.tw caption{max-width:calc(100vw - 40px)}
 caption{text-align:left;color:var(--ink2);font-size:14px;padding:0 0 6px}
 th,td{padding:6px 8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
@@ -48,10 +48,10 @@ details{margin:8px 0}summary{cursor:pointer;color:var(--ink2)}
 a{color:inherit}ul{padding-left:20px}
 
 .pages{list-style:none;padding:0;margin:22px 0}.pages li{margin:0 0 14px}.pages a{font-size:18px;font-weight:600}</style></head>
-<body><main><h1>Prices in the rolls</h1>
-<p class="lede">What the crown charged, as the calendared rolls of medieval England record it. Read from the entries by rules; each sale or fee counted once.</p>
+<body><div id="gate" style="position:fixed;inset:0;z-index:99;background:var(--page,#f9f9f7);display:flex;align-items:center;justify-content:center"><form id="gate-f" style="width:min(20rem,85vw)"><label for="gate-p">Password</label><input id="gate-p" type="password" autocomplete="off" style="display:block;width:100%;font-size:16px;padding:.45rem;margin:.4rem 0 .6rem"><button type="submit">Open</button><p id="gate-x" class="muted" hidden>Not that one.</p></form></div><script>(() => { const g = document.getElementById("gate"); if (localStorage.getItem("rolls-prices") === "1") { g.remove(); return; } const p = document.getElementById("gate-p"); p.focus(); document.getElementById("gate-f").addEventListener("submit", e => { e.preventDefault(); if (p.value.trim().toLowerCase() === "password") { localStorage.setItem("rolls-prices", "1"); g.remove(); } else document.getElementById("gate-x").hidden = false; }); })();</script><main><h1>Prices in the Patent Rolls</h1>
+<p class="lede">What the crown charged, as the calendared rolls of medieval England record it: the data behind a publication in progress. Read from the entries by rules, each sale or fee counted once.</p>
 <ul class="pages">
-<li><a href="price-of-a-person.html">The price of a person</a><br><span class="muted">850 sales of a ward's marriage or lands, 1232 to 1481</span></li>
+<li><a href="price-of-a-person.html">The price of a person</a><br><span class="muted">846 sales of a ward's marriage or lands, 1232 to 1481</span></li>
 <li><a href="price-of-a-confirmation.html">The price of a confirmation</a><br><span class="muted">3,073 fees to confirm an older grant, 1279 to 1486</span></li>
 </ul>
 <p class="small muted">From <a href="https://readingtherolls.com">Reading the Rolls</a>.</p>

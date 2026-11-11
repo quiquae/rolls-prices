@@ -44,6 +44,13 @@ thead th{color:var(--ink2);font-weight:600}.n{text-align:right;white-space:nowra
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .half td.m,.half td.b,.half td.w{text-align:right}
 details{margin:8px 0}summary{cursor:pointer;color:var(--ink2)}
+table.defs{font-size:13px;min-width:860px}table.defs th[scope="row"]{min-width:13ch}table.defs td{min-width:18ch}
+table.defs td.n{min-width:0}
+@media (max-width:700px){table.defs{min-width:0}table.defs thead{display:none}
+table.defs tr,table.defs th,table.defs td{display:block;min-width:0;border:0;padding:2px 0}
+table.defs tr{border-bottom:1px solid var(--border);padding:10px 0}table.defs th[scope="row"]{font-size:15px}
+table.defs td.n{text-align:left}table.defs td:empty{display:none}
+table.defs td::before{content:attr(data-l);display:block;color:var(--ink2);font-weight:600;font-size:12px}}
 .all{font-size:13px}.all td{white-space:nowrap}.all td.who{white-space:normal}
 a{color:inherit}ul{padding-left:20px}
 
@@ -51,7 +58,7 @@ a{color:inherit}ul{padding-left:20px}
 <body><div id="gate" style="position:fixed;inset:0;z-index:99;background:var(--page,#f9f9f7);display:flex;align-items:center;justify-content:center"><form id="gate-f" style="width:min(20rem,85vw)"><label for="gate-p">Password</label><input id="gate-p" type="password" autocomplete="off" style="display:block;width:100%;font-size:16px;padding:.45rem;margin:.4rem 0 .6rem"><button type="submit">Open</button><p id="gate-x" class="muted" hidden>Not that one.</p></form></div><script>(() => { const g = document.getElementById("gate"); if (localStorage.getItem("rolls-prices") === "1") { g.remove(); return; } const p = document.getElementById("gate-p"); p.focus(); document.getElementById("gate-f").addEventListener("submit", e => { e.preventDefault(); if (p.value.trim().toLowerCase() === "password") { localStorage.setItem("rolls-prices", "1"); g.remove(); } else document.getElementById("gate-x").hidden = false; }); })();</script><main><h1>Prices in the Patent Rolls</h1>
 <p class="lede">What the crown charged, as the calendared rolls of medieval England record it: the data behind a publication in progress. Read from the entries by rules, each sale or fee counted once.</p>
 <ul class="pages">
-<li><a href="price-of-a-person.html">The price of a person</a><br><span class="muted">846 sales of a ward's marriage or lands, 1232 to 1481</span></li>
+<li><a href="price-of-a-person.html">The price of a person</a><br><span class="muted">821 sales of a ward's marriage or lands, 1232 to 1481</span></li>
 <li><a href="price-of-a-confirmation.html">The price of a confirmation</a><br><span class="muted">3,073 fees to confirm an older grant, 1279 to 1486</span></li>
 <li><a href="prices-everything.html">Everything the rolls price</a><br><span class="muted">Every kind of priced act, what the king took and what he paid, a first sort by rules</span></li>
 </ul>
